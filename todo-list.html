@@ -15,6 +15,7 @@
 <body>
 	<div id="container">
 		<h2>To Do List</h2>
+		<button id="btnAddProject">Add Project</button>
 		<div id="projects">
 			<ul id="main">
 				<li><a href="#personal">Personal</a><span class="ui-icon ui-icon-close"></span></li>
@@ -50,7 +51,10 @@
 				<li><input type="checkbox">UI Design Resources</li>
 			</ol>
 		</div>
-		
+		<div id="project-dialog" title="Add a project" style="display:none;">
+			<label for="new-project">Project Name:</label>
+			<input id="new-project" type="text" />
+		</div>
 	</div>	
 	
 	<script src="main.js"></script>

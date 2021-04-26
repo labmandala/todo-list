@@ -10,7 +10,11 @@ $(document).ready(function(){
                     var projectName = $("#new-project").val();
                     $("<li><a href='#" + projectName + "'>" + projectName + "</a></li>")
                     .appendTo("#main");
+                    $("<ol id='" + projectName + "'></ol>").appendTo("#projects");
                     $("#projects").tabs("refresh");
+                    var tabCount = $("#projects .ui-tabs-nav li").length;
+                    $("#projects").tabs("option", "active", tabCount-1);
+
                     $("#new-project").val("");
                     $(this).dialog("close");
                 },

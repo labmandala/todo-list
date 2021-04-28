@@ -7,6 +7,8 @@ $(document).ready(function(){
         $("#task-dialog").dialog({width:400, resizable:false, modal:true,
             buttons:{
                 "Add new task": function(){
+                    $("#projects").tabs("refresh")
+                    var activeTab = $("#projects").tabs("option", "active");
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },

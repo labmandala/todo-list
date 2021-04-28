@@ -9,6 +9,8 @@ $(document).ready(function(){
                 "Add new task": function(){
                     $("#projects").tabs("refresh")
                     var activeTab = $("#projects").tabs("option", "active");
+                    var title = $("#main > li:nth-child(" + (activeTab+1) +") > a").attr("href");
+                    alert(title);
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },

@@ -2,6 +2,7 @@ $(document).ready(function(){
     $("#projects").tabs();
     $("ul").sortable({axis:"x", containment:"#projects"});
     $("ol").sortable({axis:"y", containment:"#projects"});
+    $("#btnAddTask").button();
     $("#btnAddProject").button()
     .click(function(){
         $("#project-dialog").dialog({width:400, resizable:false, modal:true,

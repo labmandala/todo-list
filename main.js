@@ -27,13 +27,13 @@ $(document).ready(function(){
             buttons:{
                 "Add new project":function(){
                     var projectName = $("#new-project").val();
-                    $("<li><a href='#" + projectName + "'>" + projectName + "</a></li>")
+                    var replaceName = projectName.split(" ").join("_");
+                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a></li>")
                     .appendTo("#main");
-                    $("<ol id='" + projectName + "'></ol>").appendTo("#projects");
+                    $("<ol id='" + replaceName + "'></ol>").appendTo("#projects").sortable();
                     $("#projects").tabs("refresh");
                     var tabCount = $("#projects .ui-tabs-nav li").length;
                     $("#projects").tabs("option", "active", tabCount-1);
-
                     $("#new-project").val("");
                     $(this).dialog("close");
                 },

@@ -10,7 +10,7 @@ $(document).ready(function(){
                     $("#projects").tabs("refresh")
                     var activeTab = $("#projects").tabs("option", "active");
                     var title = $("#main > li:nth-child(" + (activeTab+1) +") > a").attr("href");
-                    alert(title);
+                    $("#projects " + title).append("<li><input type='checkbox'>" + $("#new-task").val() + "</li>");
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },

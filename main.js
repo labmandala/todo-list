@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("input[type=checkbox]").removeAttr("checked");
     $("#projects").tabs();
     $("ul").sortable({axis:"x", containment:"#projects"});
     $("ol").sortable({axis:"y", containment:"#projects"});

@@ -34,7 +34,7 @@ $(document).ready(function(){
                 "Add new project":function(){
                     var projectName = $("#new-project").val();
                     var replaceName = projectName.split(" ").join("_");
-                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a></li>")
+                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a></a><span class='ui-icon ui-icon-close'></span></li>")
                     .appendTo("#main");
                     $("<ol id='" + replaceName + "'></ol>").appendTo("#projects").sortable();
                     $("#projects").tabs("refresh");

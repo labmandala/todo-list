@@ -38,7 +38,6 @@ ol li:hover {
 }
 
 .ui-icon-close {
-	transform: scale(1.5);
+	transform: scale(.75);
 	cursor: pointer;
-	color: black;
 }

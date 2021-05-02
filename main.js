@@ -47,6 +47,7 @@ $(document).ready(function(){
                     $("#new-project").val("");
                     $(this).dialog("close");
                 } 
-            }});
+            }
+        });
     });
 });

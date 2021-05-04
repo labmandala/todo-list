@@ -9,8 +9,9 @@ $(document).ready(function(){
         });
     });
     $("#projects").on("click", "span.ui-icon-close", function(){
-        $(this).closest("li").index();
-        var id = $("#main li:eq(0)")
+        var index = $(this).closest("li").index();
+        var id = $("#main li:eq(" + index + ") a").attr("href");
+        $("#main li:eq(" + index + ")").remove();
     });
     $("#btnAddTask").button()
     .click(function(){

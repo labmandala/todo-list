@@ -8,6 +8,10 @@ $(document).ready(function(){
             $(this).remove();
         });
     });
+    $("#projects").on("click", "span.ui-icon-close", function(){
+        $(this).closest("li").index();
+        var id = $("#main li:eq(0)")
+    });
     $("#btnAddTask").button()
     .click(function(){
         $("#task-dialog").dialog({width:400, resizable:false, modal:true,

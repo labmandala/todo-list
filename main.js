@@ -12,6 +12,9 @@ $(document).ready(function(){
         var index = $(this).closest("li").index();
         var id = $("#main li:eq(" + index + ") a").attr("href");
         $("#main li:eq(" + index + ")").remove();
+        $(id).remove();
+        $("#projects").tabs("refresh");
+
     });
     $("#btnAddTask").button()
     .click(function(){
